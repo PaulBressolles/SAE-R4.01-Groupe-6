@@ -1,0 +1,93 @@
+
+
+.tableau-style {
+    border-collapse: collapse;
+    border-radius: 15px;
+    border-spacing: 1; 
+    min-width: 400px;
+    width: auto;
+    margin: 100px auto;
+    font-family: poppins;
+    overflow: hidden;
+}
+
+thead tr {
+    background-color: #47AD82;
+    color: #fff;
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: center;
+}
+
+h5{
+    text-align: center;
+    font-size: 25px;
+    font-family: poppins;
+}
+
+.btnRefuser{
+    background-color: #ff4c30;
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 5px;
+    height: 30px;
+    width: 100px;
+    font-size: 15px;
+    cursor: pointer;
+    border: unset;
+}
+
+.btnAccept{
+    background-color: #47AD82;
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+    margin-top: 5px;
+    height: 30px;
+    width: 100px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: poppins;
+    border: unset;
+}
+
+.deconnexion{
+    font: 20px "Poppins";
+    font-weight: bold;
+    color: #3D3D3D;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.deconnexion:hover{
+    color: #a5a5a5;
+}
+
+.btnAccept:hover{
+    background-color: #59d6a2;
+}
+
+.btnRefuser:hover{
+    background-color: #fb8e7d;
+}
+
+
+.boiteTableau{
+    box-shadow: 0px 2px 8px 3px rgba(99, 99, 99, 0.4);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    margin:0px 100px
+}
+
+.boiteEnfant{
+    box-shadow: 0px 2px 8px 3px rgba(99, 99, 99, 0.4);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    margin: auto; 
+    margin-top: 50px; 
+    width: 60%;
+}

@@ -1,0 +1,209 @@
+/*#######################################################################*/
+/*#############                 CONTENU                     #############*/
+/*#######################################################################*/
+
+
+
+
+.animationTitre{
+    animation: animationH1 1s;
+}
+
+.animationSousTitre{
+    animation: animationSousTitre 1.5s;
+}
+
+.animationFleche{
+    animation: animationTremblement 3s;
+}
+
+.animationAccueil{
+    animation: animationContenu 2s ease-in 2s;
+    animation: animationContenu 2s;
+}
+
+.chuteDesJetons{
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    position: absolute;
+    overflow: hidden;
+    animation:chuteBoite 4.5s linear;
+    visibility: hidden;
+}
+
+.jetonChute{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top:-150px;
+    left:10%; 
+    border-radius: 100px;
+    animation:chute 2s ease-in, animationPulse 0.5s ease-in-out ;
+}
+
+.jetonChute:nth-child(1){
+    left:20%;
+    animation-delay: 1s;
+}
+
+.jetonChute:nth-child(2){
+    left:40%;
+    animation-delay: 0.8s;
+}
+
+.jetonChute:nth-child(3){
+    left:60%;
+    animation-delay: 1.2s;
+}
+
+.jetonChute:nth-child(4){
+    left:90%;
+    animation-delay: 0.6s;
+}
+
+.jetonChute:nth-child(5){
+    left:0%;
+    animation-delay: 0.25s;
+}
+
+.jetonChute:nth-child(6){
+    left:70%;
+    animation-delay: 0.35s;
+}
+
+.jetonChute:nth-child(7){
+    left:35%;
+    animation-delay: 0.4s;
+}
+
+.jetonChute:nth-child(8){
+    left:55%;
+    animation-delay: 0.2s;
+}
+
+.delai .jetonChute:nth-child(1){
+    left:20%;
+    animation-delay: 2s;
+}
+
+.delai .jetonChute:nth-child(2){
+    left:40%;
+    animation-delay: 1.8s;
+}
+
+.delai .jetonChute:nth-child(3){
+    left:60%;
+    animation-delay: 2.2s;
+}
+
+.delai .jetonChute:nth-child(4){
+    left:90%;
+    animation-delay: 1.6s;
+}
+
+.delai .jetonChute:nth-child(5){
+    left:0%;
+    animation-delay: 1.25s;
+}
+
+.delai .jetonChute:nth-child(6){
+    left:70%;
+    animation-delay: 1.35s;
+}
+
+.delai .jetonChute:nth-child(7){
+    left:35%;
+    animation-delay: 1.4s;
+}
+
+.delai .jetonChute:nth-child(8){
+    left:55%;
+    animation-delay: 1.2s;
+}
+
+.delai{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+  
+
+
+/*#######################################################################*/
+/*#############                ANIMATION                    #############*/
+/*#######################################################################*/
+
+
+
+
+@keyframes animationH1{
+    0%{
+        opacity: 0;
+        transform: translateX(-20px);
+    }100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes animationSousTitre{
+    0%{
+        opacity: 0;
+    }50%{
+        opacity: 0;
+        transform: scale(1);
+    }60%{
+        transform: scale(0.8);
+    }70%{
+        opacity: 1;
+        transform: scale(1.2);
+    }80%{
+        transform: scale(0.9);
+    }90%{
+        transform: scale(1.1);
+    }100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes animationContenu{
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+}
+
+@keyframes chuteBoite{
+    99%{
+        visibility: visible;
+    }100%{
+        visibility: hidden;
+    }
+}
+
+@keyframes chute{
+    0%{
+        top: -50px;
+    }100%{
+        top:100%;
+    }
+}
+
+@keyframes animationPulse{
+    0%{
+        transform: scale(1);
+    }20%{
+        transform: scale(0.8);
+    }40%{
+        opacity: 1;
+        transform: scale(1.2);
+    }60%{
+        transform: scale(0.9);
+    }80%{
+        transform: scale(1.1);
+    }100%{
+        transform: scale(1);
+    }
+}

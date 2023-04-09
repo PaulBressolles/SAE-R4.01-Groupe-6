@@ -1,0 +1,2005 @@
+/*#######################################################################*/
+/*#############                VARIABLES                    #############*/
+/*#######################################################################*/
+
+
+
+
+
+:root {
+    --grisTresFonce: #1B1B1B;
+    --grisFonce: #3D3D3D;
+    --gris: #9C9C9C;
+    --grisClair: #DEDEDE;
+    --grisTresClair: #ECECEC;
+    --rouge: #EB5954;
+    --vert: #708E86;
+    --jaune: #EFDFD0;
+    --orange: #D2A665;
+    --bleu: #6577D2;
+}
+
+
+
+/*#######################################################################*/
+/*###############                 FONT                    ###############*/
+/*#######################################################################*/
+
+
+
+
+
+
+
+
+
+/*#######################################################################*/
+/*###############                CADRE                    ###############*/
+/*#######################################################################*/
+
+
+
+
+html, body{
+    all: unset;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+html{
+	background-image: url("../SVG/fondEcran.svg");
+	background-size: cover;
+	background-repeat: repeat-y;
+}
+
+body{
+	display: flex;
+    flex-direction: column;
+	justify-content: center;
+    align-items: center;
+}
+
+body.pageUnique{
+    height: 100vh;
+}
+
+
+
+
+/*#######################################################################*/
+/*###############               SECTION                   ###############*/
+/*#######################################################################*/
+
+
+
+
+section{
+    all: unset;
+    width: 90%;
+    margin: 150px 0 0 0;
+    border-radius: 25px;
+    background-color: white;
+	box-shadow: 0px 1px 11px -5px rgba(0,0,0,0.50);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10% 0 20% 0;
+    margin: 150px 0 0 0;
+    position: relative;
+}
+
+section.objectif{
+    padding: 5% 0 20% 0;
+}
+
+section.sectionUnique{
+    height: 70vh;
+}
+
+section.sectionInscription{
+    height: 100%;
+}
+
+.espaceBlanc10{
+    width: 100%;
+    height: 10px;
+}
+
+.espaceBlanc30{
+    width: 100%;
+    height: 30px;
+}
+
+.espaceBlanc50{
+    width: 100%;
+    height: 50px;
+}
+
+.espaceBlanc100{
+    width: 100%;
+    height: 100px;
+}
+
+.choixAccueil{
+    width: 90%;
+    height: 150px;
+    background-color: white;
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.enfantListe{
+    width: 90%;
+    height: 200px;
+    background-color: white;
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.enfantListeNom{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.enfantListeChoix{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+form.validationAjoutImage{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenuJeton{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.overlay{
+    position: absolute;
+    width: 90%;
+    height: 80vh;
+    background-color: white;
+    transition: opacity .4s;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    border-radius: 20px;
+}
+
+.overlayJS{
+    position: absolute;
+    width: 90%;
+    background-color: white;
+    transition: opacity .4s;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    border-radius: 20px;
+}
+
+.overlayJS.visible{
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay:target{
+    visibility: visible;
+    opacity: 1;
+}
+
+.ajoutImage{
+    width: 70%;
+    height: 250px;
+    border-radius: 20px;
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ajoutImage.affichage{
+    width: 40%;
+    height: 150px;
+}
+
+.ligneMembreEquipe{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.boitePresentationObjectif{
+    width: 80%;
+    min-height: 110px;
+    border-radius: 20px;
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-left: 20px;
+    
+}
+
+.boitePresentationObjectif.statistiques{
+    padding-left: 0px;
+    min-height: 130px;
+    
+}
+
+.boiteSectionObjectif{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.boiteSectionObjectif.titreObjectif{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.conteneurImageEtat{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+img.etatObjectif{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    position: absolute;
+    top:10px;
+    left:10px;
+}
+
+.etatObjectif{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    position: absolute;
+    background-color: var(--grisTresFonce);
+    top:10px;
+    left:10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.etatObjectif.pourcentage{
+    background-color: var(--vert);
+    right: 10px;
+    left: unset;
+    font-size: 14px;
+}
+
+.lignePointObjectif{
+    width: 80%;
+    height: 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.rondObjectifStatistique{
+    width: 15px;
+    height: 15px;
+    background-color: var(--vert);
+    border-radius: 100px;
+}
+
+.rondObjectifStatistique.rouge{
+    background-color: var(--rouge);
+}
+
+img.etatObjectif.image{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    object-fit: cover;
+}
+
+
+
+.titreObjectifDuree{
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.titreObjectifDuree.statistiques{
+    width: 100%;
+}
+
+
+
+p.tempRestant{
+    font-size: 0.8em;
+    color: var(--rouge);
+    text-align: center;
+}
+
+p.sousTitreObjectif{
+    font-size: 0.7em;
+    text-align: center;
+}
+
+.compteurNombreJeton{
+    width: 25%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p.compteurJeton{
+    padding-top: 10px;
+    font-size: 0.9em;
+}
+
+
+
+
+
+/*#######################################################################*/
+/*###############                TEXTE                    ###############*/
+/*#######################################################################*/
+
+
+
+
+h1{
+    all: unset;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 3rem;
+}
+
+h1.titreObjectif{
+    font-size: 1.7em;
+    text-align: center;
+    width: 60%;
+}
+
+h1.titreObjectif.grand{
+    width: 80%;
+}
+
+h1.connexion{
+    width: 80%;
+    padding: 0 10% 0 10%;
+    text-align: center;
+    color: var(--grisTresFonce);
+}
+
+h1.connexion.petit{
+    font-size: 2em;
+    text-align: left;
+}
+
+h1.connexion.enfantNomPrenom{
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+h1.headerTitre{
+    font-size: 1.7em;
+    color: var(--grisFonce);
+}
+
+h1.tresPetit{
+    font-size: 1.3em;
+}
+
+h1.tresTresPetit{
+    font-size: 100%;
+}
+
+h1.titreObjectifListe{
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+p.etatDureeObjectif{
+    font-size: 17px;
+    font-style: italic;
+    text-align: center;
+    width: 100%;
+}
+
+p.etatDureeObjectif.sousTitre{
+    width: 80%;
+}
+
+p.etatDureeObjectif.rouge{
+    color: var(--rouge);
+    font-weight: 600;
+}
+
+input[type="submit"].oeilRond{
+    width: 100%;
+    height: 100%;
+    background-color: unset;
+}
+
+form.retry{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+}
+
+input[type="submit"].boutonRetry{
+    width: 100%;
+    height: 100%;
+    background-color: unset;
+    border-radius: 100px;
+    background-image: url('../SVG/recommencer.svg');
+    background-size: contain;
+}
+
+form.oeilFormulaire{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -25px;
+    background-image: url('../SVG/oeil.svg');
+    background-size: cover;
+}
+
+.rajoutLigneJeton{
+    position: absolute;
+    width: 60%;
+    height: 30px;
+    bottom: -30px;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+    z-index: 0;
+    box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+}
+
+h2{
+    all: unset;
+}
+
+h2.moyenne{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--vert);
+    font-size: 70px;
+    height: 80px;
+}
+
+h2.sousTitreMoyenne{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--vert);
+    font-size: 1.8rem;
+}
+
+h2.nomPrenomEnfant{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--grisTresFonce);
+    font-size: 1.5rem;
+}
+
+h2.nomPrenomEnfant.compteur{
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+h2.titreSection{
+    width: 80%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--gris);
+    font-size: 1.5rem;
+    padding-left: 10%;
+}
+
+.filDiscussion{
+    width: 90%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+h2.filDiscussion{
+    width: 80%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--gris);
+    font-size: 1.5rem;
+}
+
+h3{
+    all: unset;
+    width: 100%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--grisFonce);
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+}
+
+h4{
+    all: unset;
+    width: 80%;
+    padding: 10px 0 0 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--grisFonce);
+    font-size: 1.2rem;
+}
+
+h4.titreh4{
+    text-align: center;
+}
+
+h4.titreh4.objectif{
+    text-align: center;
+    font-size: 23px;
+}
+
+h4.reponse{
+    text-align: justify;
+    font-weight: 400;
+}
+
+
+
+p{
+    all: unset;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: var(--grisFonce);
+}
+
+p.texteFormulaire{
+    width: 80%;
+    padding-left:  10%;
+    padding-right: 10%;
+}
+
+p.sousTitreH1{
+    width: 80%;
+    font-weight: 300;
+    text-align: center;
+}
+
+p.sousTitreH1.epais{
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+p.sousTitreH1.membre{
+    font-size: 18px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.boiteNomRole{
+    width: 80%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+p.sousTitreH1.epais.membre{
+    width: 100%;
+    font-weight: 800;
+}
+
+p.sousTitreH1.rouge{
+    color: var(--rouge);
+    font-weight: 500;
+}
+
+p.televerserFichier{
+    width: 80%;
+    text-align: center;
+    margin-top: 5px;
+}
+
+p.televerserFichier.grand{
+    width: 100%;
+}
+
+input[type="submit"].traiter{
+    width: 40%;
+    height: 50px;
+    background-color: white;
+    color: var(--grisFonce);
+    font-weight: 400;
+}
+
+p.creationObjectif{
+    width: 75%;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+}
+
+p.texteClassique{
+    text-align: left;
+    width: 80%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+h6.emetteur{
+    all: unset;
+    width: 95%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    font-style: italic;
+    text-align: right;
+    opacity: 0.6;
+    color: var(--gris);
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+h6.emetteur.gauche{
+    padding-left: 5%;
+    flex-direction: row;
+}
+
+
+
+
+/*#######################################################################*/
+/*###############                INPUT                    ###############*/
+/*#######################################################################*/
+
+
+
+
+input{
+    all: unset;
+}
+
+input[type="text"], input[type="email"], input[type="password"]{
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    color: var(--grisTresFonce);
+    padding: 0 25px 0 25px;
+    cursor: pointer;
+}
+
+input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="password"]::placeholder{
+    font-weight: 300;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--gris);
+}
+
+input[type="text"]:focus,input[type="password"]:focus,input[type="email"]:focus{
+    animation: animationSelection 0.5s;
+}
+
+/* Champ de texte pour renseigner des information */
+
+.champDeSaisi{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.champDeSaisi.rechercheEnfant{
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.champDeTexte{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.champDeSaisi.lien{
+    height: 150px;
+}
+
+.inputChamp{
+    width: 300px;
+    height: 70px;
+    border-radius: 50px;
+    background-color: white;
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+.inputChamp.erreur{
+    animation: animationErreurChampsFondEcran 1s, animationErreurChampsVibration 0.5s;
+}
+
+.inputChamp.recherche{
+    width: 70%
+}
+
+input[type="submit"]{
+    width: 200px;
+    height: 70px;
+    border-radius: 50px;
+    background-color: var(--grisTresFonce);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+}
+
+input[type="submit"].boutonAfficherObjectif{
+    width: 42%;
+    height: 50px;
+    font-size: 15px;
+    background-color: var(--grisFonce);
+}
+
+input[type="submit"].boutonAfficherCompte{
+    width: 42%;
+    height: 50px;
+    font-size: 15px;
+    background-color: var(--vert);
+}
+
+input[type="submit"].boutonCache{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+input[type="submit"].boutonCacheAbsolu{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+}
+
+form.boutonCacheAbsolu{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+}
+
+button.boutonCacheRecompense{
+    all:unset;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+input[type="submit"].boutonCacheRecompense{
+    all:unset;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+form.boutonCache{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 997;
+}
+
+form.creationObjectifFormulaire{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form.basSection{
+    bottom:50px;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.boutonNotificationChoix{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type="submit"].choixNotification{
+    background-color: unset;
+    box-shadow: unset;
+    color: var(--gris);
+    font-size: 25px;
+    padding: 0;
+    border-radius: unset;
+}
+
+input[type="submit"].choixNotification.actif{
+    color: var(--grisTresFonce);
+}
+
+input[type="submit"].choixNotification.gauche{
+    text-align: left;
+}
+
+input[type="submit"].choixNotification.droite{
+    text-align: right;
+}
+
+form.choixSuiviObjectif{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+form.choixSuiviObjectif.suivi{
+    
+    flex-direction: column;
+    
+}
+
+.boutonAjoutJeton{
+    width: 80%;
+    height: 60px;
+    border-radius: 20px;
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    background-color: var(--vert);
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.boutonAjoutJeton.commence{
+    height: 80px;
+}
+
+
+/* Bouton classique */
+
+.boutonValidation{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="submit"].boutonRond{
+    width: 70px;
+    height: 70px;
+    background-color: unset;
+    border-radius: 100%;
+    position: relative;
+}
+
+input[type="submit"].boutonRondFleche{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    position: relative;
+    background-image: url('../SVG/flecheBouton.svg');
+    background-size: cover;
+}
+
+input[type="submit"].boutonRond.annuler{
+    width: 80px;
+    height: 80px;
+    background-image: url("../SVG/boutonAnnuler.svg");
+    background-size: cover;
+}
+
+input[type="submit"].boutonRond.annuler.petit{
+    width: 30px;
+    height: 30px;
+}
+
+input[type="submit"].boutonRond.valider{
+    width: 80px;
+    height: 80px;
+    background-image: url("../SVG/boutonRondValider.svg");
+    background-size: cover;
+}
+
+input[type="submit"].boutonRond.valider.petit{
+    width: 50px;
+    height: 50px;
+    background-image: url("../SVG/creationObjectif.svg");
+}
+
+h4.titreMembreDemande{
+    width: 80%;
+    padding: 10px 0 10px 0;
+    border-radius: 100Px;
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    text-align: center;
+
+}
+
+.boiteSelecteur{
+    width: 80%;
+}
+
+.contenuNotification{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenuNotification.membre{
+    box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    padding: 10px 0 10px 0;
+    border-radius: 20px;
+    position: relative;
+}
+
+.ligneBoutonRond{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+input[type="submit"].boutonRondAjout{
+    width: 50px;
+    height: 50px;
+    background-color: unset;
+    border-radius: 100%;
+    position: relative;
+    background-image: url("../SVG/ajoutBoutonFichier.svg");
+}
+
+input[type="submit"].boutonRond.recherche{
+    background-image: url("../SVG/fondBoutonRecherche.svg");
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+}
+
+.boutonRondConteneur{
+    background-color: var(--grisTresFonce);
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Selecteur */
+
+.selecteurDate{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.selecteurDate.demandeSuivi{
+    width: 100%;
+    height: 70px;
+    height: auto;
+}
+
+.selecteur{
+    width: 90px;
+    height: 70px;
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    border-radius: 50px;
+    user-select: none;
+    position: relative;
+}
+
+.selecteur.demandeSuivi{
+    width: 100%;
+}
+
+select{
+    all: unset;
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    padding: 20%;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;color: black;
+    font-style: italic;
+    font-weight: 350;
+    text-align: center;
+    border-radius: unset;
+}
+
+select.demandeSuivi{
+    width: 100%;
+    height: 100%;
+    padding: 0 20% 0 10%;
+    text-align: left;
+    font-size: 18px;color: black;
+}
+
+select::after{
+    border-radius: 0 0 20px 20px;
+}
+
+/* Bouton Radio */
+
+.conteneurBoutonRadio{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.boiteBoutonRadio {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    padding: 5% 5%;
+    border-radius: 16px;
+    box-shadow: 
+        4px 4px 4px 0px #d1d9e6 inset,
+        -4px -4px 4px 0px #fff inset;
+    margin-bottom: 50px;
+}
+.boutonRadio {
+    width: 100%;
+    margin: 8px 0;
+    position: relative;
+}
+
+.radioCache {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.ligneBoutonRadio {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #394a56;
+}
+
+.intitule {
+    font-size: 30px;
+    margin-left: 30px;
+    text-align: center;
+    opacity: 0.6;
+    transition: all 0.2s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+  
+}
+
+.cercle {
+    position: relative;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;  
+}
+
+.cercle::before,
+.cercle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    background-color:var(--vert);
+}
+
+.cercle::after {
+    background-color: #ecf0f3;
+    box-shadow: -4px -2px 4px 0px #fff, 4px 2px 8px 0px #d1d9e6;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.radioCache:checked ~ .ligneBoutonRadio .cercle::after {
+    opacity: 0;
+}
+
+.radioCache:checked ~ .ligneBoutonRadio .cercle{
+    animation: animationBoutonRadio 0.5s;
+}
+
+.radioCache:focus ~ .ligneBoutonRadio .intitule {
+    opacity: 1;
+    transform: translateX(8px);
+    font-weight: 600;
+}
+
+.ligneBoutonRadio:hover .intitule {
+    opacity: 1;
+}
+
+input[type="file"]{
+    all: unset;
+}
+
+input[type="file"].boutonRondAjout{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.boutonRondAjoutImage{
+    width: 50px;
+    height: 50px;
+    background-color: var(--grisTresFonce);
+    border-radius: 100%;
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    background-image: url("../SVG/ajoutBoutonFichier.svg");
+    background-size: cover;
+    cursor: pointer;
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+}
+
+.boiteChoix{
+    width: 80%;
+    border-radius: 100px;  
+    box-shadow: 0px 1px 11px -5px rgba(0,0,0,0.50);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+  .champNombrePlusMoins{
+  width: 50%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 30px "Poppins";
+  font-weight: bold;
+  font-style: italic;
+  user-select: none;
+}
+
+.boutonPlusMoins{
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.80);
+  font: 30px "Nunito";
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  padding: 0;
+}
+
+input[type="submit"].boutonEnvoie{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-image: url('../SVG/boutonEnvoie.svg');
+    background-size: contain;
+    position: absolute;
+    background-color: unset;
+    box-shadow: unset;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+input[type="text"].message{
+    overflow: hidden;
+    width: 75%;
+}
+
+.presentationRecompense{
+    width: 80%;
+    background-color: white;
+    box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.80);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 10px 0;
+    position: relative;
+}
+
+.messagerieInput{
+    all: unset;
+    box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.80);
+    border-radius: 20px;
+    padding: 20px;
+    width: 80%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 16px;
+}
+
+textarea::placeholder{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.boiteMessagerie{
+    width: 80%;
+    height: auto;
+    box-shadow: inset 4px 2px 8px 0px #d1d9e6;
+    border-radius: 20px;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.messageTexte{
+    max-width: 70%;
+    height: auto;
+    background-color: var(--jaune);
+    border-radius: 20px;
+    padding: 10px 20px 10px 20px;
+    box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.20);
+}
+
+.boiteMessage{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p.message{
+    all: unset;
+    max-width: 80%;
+    background-color: var(--jaune);
+    border-radius: 20px;
+    padding: 10px 20px 10px 20px;
+    box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.20);
+    display:inline;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--grisTresFonce);
+}
+
+p.message.autreUser{
+    background-color: var(--grisTresClair);
+}
+
+p.dateMessage{
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+p.ligneDateJour{
+    height: 50px;
+    display: inline;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.3;
+    
+}
+
+/*#######################################################################*/
+/*###############                LABEL                    ###############*/
+/*#######################################################################*/
+
+
+
+
+label{
+    all: unset;
+}
+
+label.labelChampDeSaisi{
+    width: 80%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--grisTresFonce);  
+    padding-left: 10%;  
+}
+
+
+
+
+/*#######################################################################*/
+/*###############                 LIEN                    ###############*/
+/*#######################################################################*/
+
+
+
+
+a{
+    all: unset;
+    cursor: pointer;
+}
+
+a.lienConnexion{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.15em;
+    color: var(--gris);
+    padding: 10px 0 0 0;
+}
+
+a.boutonRondModification{
+    width: 50px;
+    height: 50px;
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    background-image: url("../SVG/modification.svg");
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    z-index: 997;
+}
+
+a.boutonRondRetourArriere{
+    width: 50px;
+    height: 50px;
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    background-image: url("../SVG/fondRetourArriere.svg");
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    z-index: 997;
+}
+
+.boutonRondRetourSupprime{
+    width: 30px;
+    height: 30px;
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    background-image: url("../SVG/boutonSupprimer.svg");
+    background-size: cover;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    z-index: 997;
+}
+
+a.boutonRondModification.message{
+    background-image: url("../SVG/message.svg");
+}
+
+a.boutonRondModification.suppression{
+    background-image: url("../SVG/boutonSupprimer.svg");
+    background-size: cover;
+    top: 70px;
+}
+
+a.boutonAfficherObjectifCompte{
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--grisTresFonce);
+    cursor: pointer;
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a.boutonAjoutImage{
+    width: 50px;
+    height: 50px;
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    background-image: url("../SVG/boutonTeleverser.svg");
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+a.boutonAjoutImage.recompense{
+    background-image: url("../SVG/ajoutBoutonFichier.svg");
+    position: absolute;
+    right: -25px;
+    top: -25px;
+    background-size: cover;
+}
+
+.boutonCreationObjectif{
+    width: 70%;
+    height: 100px;
+    background-color: var(--vert);
+    border-radius: 20px;
+    padding: 0 5% 0 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+a.lienCache{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    z-index: 998;
+}
+
+progress{
+    all:unset;
+}
+
+
+/*#######################################################################*/
+/*#############                   IMAGE                     #############*/
+/*#######################################################################*/
+
+
+
+
+img{
+    all: unset;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+img.croix{
+    animation: animationCroixRouge 1s;
+    animation-delay: 1s;
+}
+
+img.flecheBouton{
+    position: absolute;
+    width: 100%;
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+form.fleche{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+img.grandJeton{
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    object-fit: cover;
+    box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+img.recompenseChoix{
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+img.logoMembre{
+    width: 25px;
+    height: 25px;
+}
+
+img.creationObjectif{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+}
+
+img.ajoutJeton{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    position: absolute;
+    top: -25px;
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+}
+
+img.imageRecompense{
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    overflow: hidden;
+    padding: 10%;
+}
+
+img.imageRecompenseObjectif{
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    overflow: hidden;
+    padding: 10%;
+}
+
+.afficageImageRecompense{
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    padding: 5%;
+    animation: animationPulse 1s ease-in-out infinite;
+}
+
+img.imageRecompenseObjectif.grand{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+img.imageObjectif{
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    overflow: hidden;
+    padding: 10%;
+}
+
+img.validation{
+    width: 30%;
+    height: auto;
+}
+
+img.validation.annule{
+    width: 20%;
+}
+
+img.reponseNotification{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+}
+
+.croixRouge{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10%;
+    top: 50%; 
+    transform: translateY(-50%);
+}
+
+.flecheSelecteur{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 10%;
+    top: 50%; 
+    transform: translateY(-50%);
+}
+
+.choixImage{
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+	box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.choixImage.objectif{
+    width: 80%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: unset;
+}
+
+.choixImage.objectif.recompense{
+    width: 100%;
+    align-items: unset;
+}
+
+.boiteObjectif{
+    width: 40%;
+    height: auto;
+    position: relative;
+    justify-content: space-around;
+}
+
+.boiteObjectifRecompense{
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.petitCentre{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  }
+
+
+
+/*#######################################################################*/
+/*#############                   IMAGE                     #############*/
+/*#######################################################################*/
+
+
+
+
+.lignePoint{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.pointAttente{
+    width: 15px;
+    height: 15px;
+    margin: 0 20px 0 20px;
+    background-color: var(--grisFonce);
+    border-radius: 100%;
+}
+
+.fondDessin{
+    width: 80%;
+    height: 250px;
+    margin: auto;
+    border-radius:10%;
+    box-shadow: inset 4px 2px 8px 0px #d1d9e6;
+}
+
+.boiteCompteurJeton{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+  }
+
+.ligneCompteurJeton{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageJetonCompteur{
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img.logoCompteur{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+img.noirBlanc{
+    filter: grayscale(100%);
+}
+
+.boiteJetonHistorique{
+    width: 80%;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px -1px rgba(0,0,0,0.15);
+    background-color: white;
+    padding: 20px;
+}
+
+.ligneJetonHistorique{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+.progressbar-wrapper {
+    background-color: white;
+    
+    box-shadow: 
+        0px 5px 10px -1px rgba(0,0,0,0.15),
+        inset 0px 4px 15px -4px rgba(0,0,0,0.15) ; 
+    color: white;
+    border-radius: 80px;
+    width: 80%;
+    height: 35px;
+    overflow: hidden;
+  }
+
+  .progressbar-wrapper.hauteur{
+    width: 200px;
+    transform: rotate(-90deg);
+  }
+
+  .boiteProgressBar{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  
+  .progressbar {
+    background-color: var(--white);
+    color: white;
+    text-align: right;
+    height: 100%;
+    border-radius: 80px;
+    width: 0;
+    transition: width 2s;
+  }
+  
+  .progressbar[title="downloaded"] {
+     background-color: var(--vert);
+  }
+
+  .progressbar[title="bleu"] {
+    background-color: var(--bleu);
+ }
+
+ .progressbar[title="orange"] {
+    background-color: var(--orange);
+ }
+  
+  
+
+
+
+
+
+/*#######################################################################*/
+/*#############                ANIMATION                    #############*/
+/*#######################################################################*/
+
+
+
+
+@keyframes animationSelection{
+    0%{
+        transform: scale(1);
+    }20%{
+        transform: scale(0.95);
+    }40%{
+        transform: scale(1.05);
+    }60%{
+        transform: scale(0.97);
+    }80%{
+        transform: scale(1.03);
+    }100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes animationErreurChampsFondEcran{
+    0%{
+        background-color: var(--rouge);
+        color: white;
+    }100%{
+        background-color: white;
+        color: var(--gris);
+    }
+}
+
+@keyframes animationErreurChampsVibration{
+    0%{
+        transform: translateX(0px);
+    }20%{
+        transform: translateX(-20px);
+    }40%{
+        transform: translateX(20px);
+    }60%{
+        transform: translateX(-10px);
+    }80%{
+        transform: translateX(10px);
+    }100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes animationCroixRouge{
+    0%{
+        transform: scale(1);
+    }20%{
+        transform: scale(1.2);
+    }40%{
+        transform: scale(0.9);
+    }60%{
+        transform: scale(1.1);
+    }80%{
+        transform: scale(1);
+    }100%{
+    }
+}
+
+@keyframes animationBoutonRadio{
+    0%{
+        transform: scale(1);
+    }20%{
+        transform: scale(0.8);
+    }40%{
+        transform: scale(1.2);
+    }60%{
+        transform: scale(0.9);
+    }80%{
+        transform: scale(1.1);
+    }100%{
+        transform: scale(1);
+    }
+}
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 90 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;">
+    <g id="Groupe_86" transform="matrix(0.825688,0,0,0.825688,-171.743,-653.118)">
+        <g id="Ellipse_20" transform="matrix(1,0,0,1,208,790.999)">
+            <circle cx="54.5" cy="54.5" r="54.5" style="fill:rgb(112,142,134);"/>
+        </g>
+        <g id="Ligne_40" transform="matrix(0.990088,-0.14045,0.14045,0.990088,251.26,816.193)">
+            <path d="M-7.267,24.849L0,37.586" style="fill:none;fill-rule:nonzero;stroke:white;stroke-width:9px;"/>
+        </g>
+        <g id="Ligne_41" transform="matrix(0.990088,-0.14045,0.14045,0.990088,246.445,842.606)">
+            <path d="M35.706,0L8.478,12.111" style="fill:none;fill-rule:nonzero;stroke:white;stroke-width:9px;"/>
+        </g>
+    </g>
+</svg>

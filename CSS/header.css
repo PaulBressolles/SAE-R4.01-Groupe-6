@@ -1,0 +1,228 @@
+/*#######################################################################*/
+/*###############                CADRE                    ###############*/
+/*#######################################################################*/
+
+
+
+
+header, .ombreVague{
+    all: unset;
+    margin: 0;
+    padding: 0;
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    top:0;
+    /*z-index: 997;*/
+    background-image: url('../SVG/vagueHeader.svg');
+    background-position: top;
+    background-repeat: repeat-x;
+    animation: animationVague 25s cubic-bezier(0, 0, 0.58, 1) infinite;
+}
+
+.fondVague{
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    z-index: 999;
+    background-color: white;
+}
+
+.ombreVague{
+    z-index: 997;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.1));
+}
+
+.menuIcone{
+    width: 90%;
+    height: 30%;
+    position: absolute;
+    z-index: 999;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items:flex-end;
+    padding: 0 5% 0 5%;
+}
+
+.icone{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boutonCloche{
+    width: 15%;
+    height: 35%;
+    transform: translate(0, -15px);
+    user-select: none;
+    z-index: 998;
+    position: relative;
+}
+
+.animation{
+    animation: animationTremblement 3s infinite;
+}
+
+input.lienInvisible{
+    width: 80%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    margin: 0;
+    z-index: 2;
+}
+
+
+
+
+/*#######################################################################*/
+/*###############              BOUTTON MENU               ###############*/
+/*#######################################################################*/
+
+
+
+
+.menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+}
+
+.ligne {
+    fill: none;
+    stroke: var(--grisFonce);
+    stroke-width: 15;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    stroke-linecap:round;
+}
+  
+.ligne1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 15;
+}
+
+.ligne2 {
+    stroke-dasharray: 30 207;
+    stroke-dashoffset: -30;
+    stroke-width: 15;
+}
+
+.active .ligne1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 15;
+}
+
+.active .ligne2 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 15;
+}
+
+.fondMenu.afficher{
+    transform: translateY(0);
+}
+
+.fondMenu{
+    width: 100%;
+    height: 100vh;
+    background: white;
+    position: absolute;
+    z-index:998;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: translateY(-100%);
+}
+
+.menuListe{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.listeLien{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 15%;
+    align-items: center;
+}
+
+.rondNotification{
+    width: 25px;
+    height: 25px;
+    background-color: var(--rouge);
+    position: absolute;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    color: white;
+    z-index: 999;
+}
+
+.animationTambour{
+    animation: animationTambour 3s infinite;
+}
+
+
+
+/*#######################################################################*/
+/*###############               ANIMATION                 ###############*/
+/*#######################################################################*/
+
+
+
+
+@keyframes animationVague{
+    0%{
+        background-position-x: -1000px;
+    }100%{
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes animationTremblement{
+    0%{
+        transform: rotate(0);
+    }5%{
+        transform: rotate(20deg);
+    }10%{
+        transform: rotate(-20deg);
+    }15%{
+        transform: rotate(10deg);
+    }20%{
+        transform: rotate(-10deg);
+    }25%{
+        transform: rotate(0deg);
+    }100%{
+    }
+}
+
+@keyframes animationTambour{
+    0%{
+        transform: scale(1)  translate(0px, -10px);
+    }5%{
+        transform: scale(1.5) translate(0px, -10px);
+    }10%{
+        transform: scale(0.5) translate(0px, -10px);
+    }15%{
+        transform: scale(1.2) translate(0px, -10px);
+    }20%{
+        transform: scale(0.8) translate(0px, -10px);
+    }25%{
+        transform: scale(1) translate(0px, -10px);
+    }100%{
+        transform: translate(0px, -10px);
+    }
+}
+
