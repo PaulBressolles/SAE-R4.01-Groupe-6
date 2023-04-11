@@ -6,7 +6,7 @@ http://projet6-dacs2.iut-tlse3.fr/
 
 ## Accès administration :
 
-http://projet6-dacs2.iut-tlse3.fr/admin/
+http://projet6-dacs2.iut-tlse3.fr/Admin/
 
 ## Identifiant prédéfini :
 
