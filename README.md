@@ -1,5 +1,13 @@
 # SAE-R4.01-Groupe-6
 
+## Accès application :
+
+http://projet6-dacs2.iut-tlse3.fr/
+
+## Accès administration :
+
+http://projet6-dacs2.iut-tlse3.fr/admin/
+
 ## Identifiant prédéfini :
 
 -----------------
