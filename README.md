@@ -8,6 +8,13 @@ http://projet6-dacs2.iut-tlse3.fr/
 
 http://projet6-dacs2.iut-tlse3.fr/Admin/
 
+## Accès base de données :
+
+http://projet6-dacs2.iut-tlse3.fr/phpmyadmin/
+
+##### **login** : associationT21
+##### **password** : 12345T21
+
 ## Identifiant prédéfini :
 
 -----------------
